@@ -1,0 +1,89 @@
+.profile-page {
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    margin: auto; /* Center the page horizontally with auto margins */
+    padding: 50px ;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-image{
+    border-radius: 100%;
+    width: 8rem;
+    height: 8rem;
+  }
+  
+  .header {
+    text-align: left;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .name {
+    font-size: 34px;
+    font-weight: inherit;
+    margin-bottom: 5px;
+  }
+  
+  .title {
+    color: grey;
+    font-weight: inherit;
+    font-size: 16px;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .about,
+  .qna {
+    flex: 1; 
+    /*border-bottom: 1px solid #ddd; */
+    font-weight: inherit;
+  }
+  
+  .about-text{
+    color: grey;
+    width: 45%;
+    padding-right: 30px;
+    font-size: 13px;
+    font-weight: inherit;
+  }
+  .qna {
+    text-align: left;
+  }
+  .qna-bar{
+    border-radius: 50%;
+    box-shadow: 2px black;
+  }
+  .qna-input {
+    width: 90%;
+    margin: 15px 0px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 19px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .start-talking-button {
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    border: none;
+    color: black;
+    display: block;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+  align-items: center;
+  }
+  .start-talking-button:hover{
+    color: grey;
+  }
+  
+  
