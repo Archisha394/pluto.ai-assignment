@@ -7,6 +7,7 @@ import { Container, CircularProgress } from '@mui/material';
 import './App.css';
 
 const App = () => {
+  console.log(process.env.REACT_APP_API_GENERATIVE_LANGUAGE_CLIENT_API_GENERATIVE_LANGUAGE_CLIENT);
   const [question, setQuestion] = useState('');
   const [chatHistory, setChatHistory] = useState([]);
   const [generatingAnswer, setGeneratingAnswer] = useState(false);
@@ -18,13 +19,14 @@ const App = () => {
     setError('');
     try {
       const response = await axios({
-        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyBV7qUYQvL4L6cIAgplejZ6tV7E837cBsM`,
+        
+
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${process.env.REACT_APP_API_GENERATIVE_LANGUAGE_CLIENT}`,
         method: 'post',
         data: {
           contents: [{ parts: [{ text: question }] }],
         },
       });
-
       const newAnswer = response.data.candidates[0].content.parts[0].text;
       setChatHistory([...chatHistory, { question, answer: newAnswer }]);
       setQuestion('');
