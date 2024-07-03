@@ -2,7 +2,6 @@
 
 .app-container {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  height: 100vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
