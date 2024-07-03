@@ -1,12 +1,241 @@
-.Navbar {
+/* App.css */
+
+.app-container {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  height: 100vh;
+  padding: 20px;
   display: flex;
-  flex-direction: row;
-  padding: 1.5rem 2rem;
-  justify-content: space-between;
-  position: sticky;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.navbar {
+  background-color: #ffffff;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar div,
+.navbar .login-button {
+  margin: 0.5rem 6rem; /* Additional padding for navbar items */
+}
+
+
+
 .login-button {
+  padding: 8px 16px;
+  color: grey;
   text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+
+.login-button:hover {
+  color: grey;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.chat-form {
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.chat-form:hover {
+  transform: translateY(-5px);
+}
+
+.textarea {
+  width: 100%;
+  min-height: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.textarea:focus {
+  border-color: #FF6A27;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #FF6A27;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button:hover {
+  background-color: #FF6A27;
+}
+
+.submit-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.answer-container {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.answer-container:hover {
+  transform: translateY(-5px);
+}
+
+.answer-text {
+  padding: 10px;
+  line-height: 1.6;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.chat-history {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.chat-message {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.chat-question, .chat-answer {
+  margin: 5px 0;
+}
+
+.clear-chat-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #FF6A27;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clear-chat-button:hover {
+  background-color: #FF6A27;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+#chat-container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#chat-history {
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.user-message {
+  text-align: right;
+  padding: 10px;
+  background-color: #FF6A27;
+  border-radius: 10px;
+  margin-bottom: 5px;
+
+
+}
+
+.bot-message {
+  text-align: left;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+form {
+  display: flex;
+}
+
+input {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #FF6A27;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#loader {
+  display: none; /* Hide by default */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+::selection {
+  background-color: #FF6A27;
+  color: white;
 }

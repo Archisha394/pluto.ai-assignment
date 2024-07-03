@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./Profile.css";
 import profileimg from "../DMJPiUa.png";
-//import { colors } from '@mui/material';
+
 const ProfilePage = () => {
   return (
     <div className="profile-page">
@@ -18,12 +19,11 @@ const ProfilePage = () => {
           </p>
         </section>
         <section className="qna">
-            <div className='qna-bar'  >
+          <div className='qna-bar'>
             <input type="text" placeholder="Ask me any question" className="qna-input" />
+            <Link to="/chat" className="start-talking-button">Start Talking</Link>
             <i className="fas fa-phone call-icon"></i>
-            </div>
-          
-          <a className="start-talking-button">Start Talking </a>
+          </div>
         </section>
       </main>
     </div>

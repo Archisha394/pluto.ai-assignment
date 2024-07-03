@@ -3,12 +3,14 @@
     display: flex;
     flex-direction: column;
     align-items: left;
+    justify-self: center;
     width: 100%;
     margin: auto; /* Center the page horizontally with auto margins */
-    padding: 50px ;
-    border: 1px solid #ddd;
+    /* margin-top: 3rem; */
+    padding: 10px ;
+    /* border: 1px solid #ddd; */
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   }
 
   .profile-image{
@@ -19,7 +21,6 @@
   
   .header {
     text-align: left;
-    padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
   }
   
@@ -27,6 +28,7 @@
     font-size: 34px;
     font-weight: inherit;
     margin-bottom: 5px;
+    text-align: left;
   }
   
   .title {
@@ -51,7 +53,7 @@
   .about-text{
     color: grey;
     width: 45%;
-    padding-right: 30px;
+    /* padding-right: 30px; */
     font-size: 13px;
     font-weight: inherit;
   }
